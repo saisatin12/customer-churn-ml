@@ -9,6 +9,7 @@ Customer churn directly impacts revenue and long-term business growth. The goal 
 ## Data Overview
 
 The dataset represents historical customer-level data, including demographics, account attributes, usage behavior, and service interactions. The target variable indicates whether a customer churned within a given time window.
+https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
 > Note: The dataset used in this project is either publicly available or anonymized for demonstration purposes.
 
@@ -50,13 +51,26 @@ This project demonstrates the potential tangible impact of data-driven insights:
 
 ```
 customer-churn-ml/
-│── data/            # Sample or processed data (no raw sensitive data)
-│── notebooks/       # EDA and experimentation notebooks
-│── src/             # Reusable data processing and modeling code
-│── models/          # Trained model artifacts (optional)
-│── README.md
-│── .gitignore
-│── LICENSE
+├── data/
+│   ├── raw/            # Original data (NOT committed)
+│   └── processed/      # Cleaned / feature-engineered data
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   └── 02_modeling.ipynb
+├── src/
+│   ├── data/           # Data loading & preprocessing code
+│   │   └── preprocess.py
+│   ├── features/       # Feature engineering logic
+│   │   └── build_features.py
+│   ├── models/         # Training & evaluation code
+│   │   └── train_model.py
+│   └── utils/          # Helper functions
+│       └── metrics.py
+├── models/             # Saved models (optional, small files only)
+│
+├── README.md
+├── .gitignore
+└── LICENSE
 ```
 
 ## Future Potential Steps
